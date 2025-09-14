@@ -33,14 +33,21 @@ A lightweight desktop writing application built with **Electron**, **Quill WYSIW
 
 ## Installation
 
-1. Clone the repository:
+
 ```bash
+
+1. Clone the repository:
+
 git clone https://github.com/J-Emer/writing-app.git
 cd writing-app
 
-2. ```bash npm install
+2. npm install
 
-3. ```bash npm start``` Note: Make sure Node.js and npm are installed on your system.
+3. npm start
+
+```
+
+**Note: Make sure Node.js and npm are installed on your system.**
 
 ## Contributing
 
