@@ -2,5 +2,4 @@ node_modules/
 dist/
 *.exe
 *.log
-
-"notes.md" 
+notes.md
