@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Writing App</title>
+    <link rel="stylesheet" href="darktheme.css" />
+  </head>
+  <body>
+    <!-- Custom Main Menu -->
+    <div id="mainMenu">
+      <div class="menu-item" id="fileMenu">
+        File
+        <div class="submenu">
+          <div id="newProject">New Project</div>
+          <div id="openProject">Open Project</div>
+          <div id="newFile">New File</div>
+          <div id="saveFile">Save File</div>
+          <div id="deleteFile">Delete File</div>
+        </div>
+      </div>
+      <div class="menu-item" id="quitMenu">Quit</div>
+    </div>
+
+    <div id="sidebar">
+      <div id="sidebar-top">
+        <button id="toggleSidebarButton">☰</button>
+      </div>
+      <div id="currentProjectSidebar">Project: None</div>
+      <ul id="fileList"></ul>
+      <div id="sidebar-resizer"></div>
+    </div>
+
+    <div id="editorContainer">
+      <div id="infoBar">
+        <span id="currentFile">File: None</span>
+      </div>
+      <!-- <textarea id="editor"></textarea> -->
+       <div class="editor" id="editor" style="height: 100%;"></div>
+      <div id="status">No file loaded</div>
+    </div>
+
+
+    <link rel="stylesheet" href="vendor/quill.snow.css">
+    <script src="vendor/quill.js"></script>
+    <script src="ui.js"></script>
+
+  </body>
+</html>
