@@ -55,7 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
+  quill.on('text-change', () => {
+    isDirty = true;
+    clearTimeout(autosaveTimer);
+    autosaveTimer = setTimeout(saveFile, 1000);
+    updateStatusBar();
+  });
 
   //---------------path helper functions-------------------------//
   function getFolderName(folderPath) {
@@ -209,13 +214,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("deleteFile").addEventListener("click", deleteFile);
   document.getElementById("quitMenu").addEventListener("click", () => window.close());
 
-  // ---------------- Quill Autosave ----------------
-  quill.on('text-change', () => {
-    isDirty = true;
-    clearTimeout(autosaveTimer);
-    autosaveTimer = setTimeout(saveFile, 1000);
-    updateStatusBar();
-  });
 
   // ---------------- IPC listeners ----------------
   window.api.on("menu-open-project", openProject);
