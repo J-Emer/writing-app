@@ -36,14 +36,13 @@ A lightweight desktop writing application built with **Electron**, **Quill WYSIW
 
 ```bash
 
-1. Clone the repository:
-
 git clone https://github.com/J-Emer/writing-app.git
+
 cd writing-app
 
-2. npm install
+npm install
 
-3. npm start
+npm start
 
 ```
 
