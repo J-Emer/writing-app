@@ -4,7 +4,15 @@ import { getEditorContent, setEditorContent } from './editor.js';
 
 let currentFolder = null;
 let currentFile = null;
+let currentFileDisplay;
 export let isDirty = false;
+
+
+export function initProject()
+{
+    currentFileDisplay = document.getElementById("currentFile");
+}
+
 
 /**
  * Open a project (folder)
@@ -35,7 +43,12 @@ export async function loadFileList() {
     const li = document.createElement('li');
     li.textContent = file.replace(/\.[^/.]+$/, ''); // filename without extension
     li.addEventListener('click', async () => {
+      console.log("---clicked on a file");
+           
       currentFile = currentFolder + '/' + file;
+             
+      currentFileDisplay.textContent = "File: " + getFileNameWithoutExtension();
+      
       const content = await window.api.readFile(currentFile);
       setEditorContent(content);
       setCurrentFile(currentFile);
